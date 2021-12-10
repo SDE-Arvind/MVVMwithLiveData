@@ -5,4 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layoutDescription="@xml/activity_add_update_dish_scene"
-    tools:context=".view.activity.AddUpdateDishActivity"/>
+    tools:context=".view.activity.AddUpdateDishActivity">
+
+    <EditText
+        android:id="@+id/et_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:hint="User Name"
+        tools:layout_editor_absoluteX="111dp"
+        tools:layout_editor_absoluteY="145dp" />
+
+    <Button
+        android:id="@+id/btn_add_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add User"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="192dp" />
+</androidx.constraintlayout.motion.widget.MotionLayout>

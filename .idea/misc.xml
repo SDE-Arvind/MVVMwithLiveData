@@ -6,7 +6,10 @@
         <entry key="app/src/main/res/layout/activity_add_update_dish.xml" value="0.19" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1381340579710145" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.24270833333333333" />
+        <entry key="app/src/main/res/layout/fragment_all_dishes.xml" value="0.14479166666666668" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.1381340579710145" />
+        <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.12239583333333333" />
+        <entry key="app/src/main/res/layout/person_list_item.xml" value="0.14479166666666668" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.2171875" />
         <entry key="app/src/main/res/menu/menu_all_dishes.xml" value="0.24375" />
       </map>
