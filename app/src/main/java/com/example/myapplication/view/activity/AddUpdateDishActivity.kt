@@ -1,6 +1,5 @@
 package com.example.myapplication.view.activity
 
-import android.app.Person
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View

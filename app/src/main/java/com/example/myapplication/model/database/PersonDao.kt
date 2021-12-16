@@ -9,6 +9,6 @@ interface PersonDao {
     @Insert()
     suspend fun insert(person: Person)
 
-    @Query("Select * from Users limit 1")
+    @Query("Select * from Users")
     fun getUsers() : Flow<List<Person>>
 }

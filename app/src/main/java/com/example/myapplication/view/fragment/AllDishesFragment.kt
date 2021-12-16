@@ -13,13 +13,17 @@ import android.annotation.SuppressLint
 import android.util.Log
 
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.MyApplication
+import com.example.myapplication.view.PersonAdapter
 import com.example.myapplication.viewmodel.PersonViewModalFactory
 import com.example.myapplication.viewmodel.PersonViewModel
 
 class AllDishesFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
+    private lateinit var adapter: PersonAdapter
+
     private var _binding: FragmentAllDishesBinding? = null
 
     private val mPersonViewModal: PersonViewModel by viewModels {
@@ -47,19 +51,22 @@ class AllDishesFragment : Fragment() {
         _binding = FragmentAllDishesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        adapter = PersonAdapter(this@AllDishesFragment)
+
+        binding.recyclerViewPerson.layoutManager = LinearLayoutManager(requireActivity())
+        binding.recyclerViewPerson.adapter = adapter;
+
         return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        m  PersonViewModal.allPersons.observe(viewLifecycleOwner) { persons ->
-//            persons.let {
-//                for (person in it) {
-//                    Log.i("TAG", "${person.uid} - ${person.userName}");
-//                }
-//            }
-//        }
+        mPersonViewModal.allPersons.observe(viewLifecycleOwner) { persons ->
+            persons.let {
+                adapter.personList(persons)
+            }
+        }
     }
 
     override fun onDestroyView() {
@@ -81,8 +88,6 @@ class AllDishesFragment : Fragment() {
                 return true
             }
         }
-
         return super.onOptionsItemSelected(item)
     }
-
 }
